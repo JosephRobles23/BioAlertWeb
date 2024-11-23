@@ -61,7 +61,7 @@ function Dashboard() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <Card className="bg-green-800/50 backdrop-blur-sm border-green-700">
+          <Card className="bg-green-400/50 backdrop-blur-sm border-green-700">
             <div className="flex items-center space-x-4">
               <AlertTriangle className="h-8 w-8 text-red-400" />
               <div className="flex-1">
@@ -76,7 +76,7 @@ function Dashboard() {
             </div>
           </Card>
           
-          <Card className="bg-green-800/50 backdrop-blur-sm border-green-700">
+          <Card className="bg-green-400/50 backdrop-blur-sm border-green-700">
             <div className="flex items-center space-x-4">
               <TreePine className="h-8 w-8 text-green-400" />
               <div className="flex-1">
@@ -91,7 +91,7 @@ function Dashboard() {
             </div>
           </Card>
           
-          <Card className="bg-green-800/50 backdrop-blur-sm border-green-700">
+          <Card className="bg-green-400/50 backdrop-blur-sm border-green-700">
             <div className="flex items-center space-x-4">
               <CalendarIcon className="h-8 w-8 text-yellow-400" />
               <div className="flex-1">
@@ -106,7 +106,7 @@ function Dashboard() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          <Card className="bg-green-800/50 backdrop-blur-sm border-green-700">
+          <Card className="bg-green-400/50 backdrop-blur-sm border-green-700">
             <div className="mb-4">
               <Title className="text-white mb-2">Tendencia de Alertas</Title>
               <TabGroup index={timeRange} onIndexChange={setTimeRange}>
@@ -119,14 +119,14 @@ function Dashboard() {
               data={getChartData()}
               index={getIndexKey()}
               categories={["alerts"]}
-              colors={["green"]}
-              valueFormatter={(value) => `${value} alertas`}
+              colors={["white"]}
+              valueFormatter={(value) => `${value} alert.`}
               yAxisWidth={48}
               className="h-72 mt-4"
             />
           </Card>
 
-          <Card className="bg-green-800/50 backdrop-blur-sm border-green-700">
+          <Card className="bg-green-400/50 backdrop-blur-sm border-green-700">
             <Title className="text-white mb-6">Área Afectada vs Alertas</Title>
             <AreaChart
               data={monthlyData}

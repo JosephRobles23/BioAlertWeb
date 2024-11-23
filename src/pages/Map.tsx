@@ -13,7 +13,7 @@ const alerts = [
     date: '2024-03-20', 
     severity: 'Alta',
     area: 45,
-    description: 'Tala ilegal detectada por drones de vigilancia',
+    description: 'Latitud: -4.5858, Longitud: -73.4167',
     status: 'En proceso'
   },
   { 
@@ -23,7 +23,7 @@ const alerts = [
     date: '2024-03-19', 
     severity: 'Media',
     area: 28,
-    description: 'Actividad sospechosa reportada por comunidad local',
+    description: 'Latitud: -12.1269, Longitud: -71.2226',
     status: 'Verificado'
   },
   { 
@@ -33,7 +33,7 @@ const alerts = [
     date: '2024-03-18', 
     severity: 'Alta',
     area: 62,
-    description: 'Deforestación detectada por imágenes satelitales',
+    description: 'Latitud: -12.8565, Longitud: -69.2601',
     status: 'Crítico'
   },
 ];
@@ -77,7 +77,7 @@ function Map() {
             <select
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
-              className="bg-green-800/50 text-white border border-green-700 rounded-lg px-4 py-2"
+              className="bg-green-400/50 text-white border border-green-700 rounded-lg px-4 py-2"
             >
               <option value="all">Todas las alertas</option>
               <option value="alta">Severidad Alta</option>
@@ -87,7 +87,7 @@ function Map() {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 bg-green-800/50 backdrop-blur-sm rounded-lg p-6">
+          <div className="lg:col-span-2 bg-green-400/50 backdrop-blur-sm rounded-lg p-6">
             <div className="h-[600px] rounded-lg overflow-hidden">
               <MapContainer
                 center={[-5.1894, -73.5135]}
@@ -134,7 +134,7 @@ function Map() {
 
           <div className="space-y-4">
             {selectedAlert ? (
-              <div className="bg-green-800/50 backdrop-blur-sm rounded-lg p-6">
+              <div className="bg-green-400/50 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">
                   Detalles de Alerta #{selectedAlert.id}
                 </h3>
@@ -164,13 +164,13 @@ function Map() {
                 </div>
               </div>
             ) : (
-              <div className="bg-green-800/50 backdrop-blur-sm rounded-lg p-6 text-center">
+              <div className="bg-green-400/50 backdrop-blur-sm rounded-lg p-6 text-center">
                 <Filter className="h-8 w-8 text-green-400 mx-auto mb-2" />
                 <p className="text-white">Selecciona una alerta en el mapa para ver sus detalles</p>
               </div>
             )}
 
-            <div className="bg-green-800/50 backdrop-blur-sm rounded-lg p-6">
+            <div className="bg-green-400/50 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-bold text-white mb-4">
                 Resumen
               </h3>
